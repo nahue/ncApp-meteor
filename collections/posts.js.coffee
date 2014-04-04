@@ -33,7 +33,27 @@ Meteor.methods
       author: user.username,
       submitted: new Date().getTime(),
       commentsCount: 0
+      upvoters: []
+      votes: 0
     )
 
     postId = Posts.insert(post)
     return postId
+
+  upvote: (postId) ->
+    user = Meteor.user()
+    # ensure the user is logged in
+    if (!user)
+      throw new Meteor.Error 401, "Necesita entrar para votar"
+    post = Posts.findOne postId
+
+    Posts.update({
+      _id: postId,
+      upvoters:
+        $ne: user._id
+    },{
+      $addToSet:
+        upvoters: user._id
+      $inc:
+        votes: 1
+    })
