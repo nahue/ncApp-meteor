@@ -23,7 +23,7 @@
   "setupPhantom": true,
 
   //location of app (local directory)
-  "app": "/home/strato1986/code/ncApp-meteor",
+  "app": ".",
 
   //configure environmental
   "env": {

@@ -1,7 +1,28 @@
 <template name="postPage">
     <div class="container">
-        <div id="main" class="row-fluid">
-            {{> postItem}}
+        <div id="main" class="row">
+            <!--<div class="post">-->
+            <div class="col-sm-8">
+                <h3>
+                    <div class="upvote btn btn-primary {{upvotedClass}}">+ 1</div>
+                     {{title}} <small>{{pluralize votes "voto"}}</small>
+                </h3>
+            </div>
+            <!--
+            <div class="col-sm-4">
+                    <p>
+                        {{pluralize votes "Vote"}}
+                        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+                        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+                    </p>
+            </div>-->
+        </div>
+        <div class="row">
+            <!--</div>-->
+            <blockquote>
+                <p style="margin-top: 20px">{{message}}</p>
+                <footer>publicado por <cite>{{author}}</cite></footer>
+            </blockquote>
             <ul class="comments">
                 {{#each comments}}
                 {{> comment}}

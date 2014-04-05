@@ -71,4 +71,5 @@ if (@Posts.find().count() == 0)
       commentsCount: 0
       upvoters: []
       votes: 0
+      message: "Texto de prueba"
     i++
