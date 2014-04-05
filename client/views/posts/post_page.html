@@ -1,13 +1,17 @@
 <template name="postPage">
-    {{> postItem}}
-    <ul class="comments">
-        {{#each comments}}
-        {{> comment}}
-        {{/each}}
-    </ul>
-    {{#if currentUser}}
-        {{> commentSubmit}}
-    {{else}}
-        <p>Iniciar sesion para comentar.</p>
-    {{/if}}
+    <div class="container">
+        <div id="main" class="row-fluid">
+            {{> postItem}}
+            <ul class="comments">
+                {{#each comments}}
+                {{> comment}}
+                {{/each}}
+            </ul>
+            {{#if currentUser}}
+                {{> commentSubmit}}
+            {{else}}
+                <p>Iniciar sesion para comentar.</p>
+            {{/if}}
+        </div>
+    </div>
 </template>

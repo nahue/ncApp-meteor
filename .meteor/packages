@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-bootstrap
 coffeescript
 jquery
 iron-router
@@ -13,3 +12,6 @@ accounts-ui-bootstrap-dropdown
 accounts-password
 underscore
 iron-router-progress
+accounts-entry
+less
+bootstrap3-less

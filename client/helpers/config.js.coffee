@@ -1,3 +1,5 @@
 Meteor.startup ->
-  Accounts.ui.config
+  AccountsEntry.config
+    homeRoute: '/'
+    dashboardRoute: '/'
     passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL'

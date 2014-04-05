@@ -1,10 +1,14 @@
 <template name="postsList">
-    <div class="posts">
-        {{#each posts}}
-            {{> postItem}}
-        {{/each}}
-        {{#if nextPath}}
-            <a class="load-more" href="{{nextPath}}">Cargar mas</a>
-        {{/if}}
+    <div class="container">
+        <div id="main" class="row-fluid">
+            <div class="posts">
+                {{#each posts}}
+                    {{> postItem}}
+                {{/each}}
+                {{#if nextPath}}
+                    <a class="load-more" href="{{nextPath}}">Cargar mas</a>
+                {{/if}}
+            </div>
+        </div>
     </div>
 </template>
