@@ -18,21 +18,22 @@
             </div>-->
         </div>
         <div class="row">
-            <!--</div>-->
-            <blockquote>
-                <p style="margin-top: 20px">{{message}}</p>
-                <footer>publicado por <cite>{{author}}</cite></footer>
-            </blockquote>
-            <ul class="comments">
-                {{#each comments}}
-                {{> comment}}
-                {{/each}}
-            </ul>
-            {{#if currentUser}}
-                {{> commentSubmit}}
-            {{else}}
-                <p>Iniciar sesion para comentar.</p>
-            {{/if}}
+            <div class="col-md-12">
+                <blockquote>
+                    <p style="margin-top: 20px">{{message}}</p>
+                    <footer>publicado por <cite>{{author}}</cite></footer>
+                </blockquote>
+                <ul class="comments">
+                    {{#each comments}}
+                    {{> comment}}
+                    {{/each}}
+                </ul>
+                {{#if currentUser}}
+                    {{> commentSubmit}}
+                {{else}}
+                    <p>Iniciar sesion para comentar.</p>
+                {{/if}}
+            </div>
         </div>
     </div>
 </template>
