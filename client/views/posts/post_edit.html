@@ -1,29 +1,25 @@
 <template name="postEdit">
-    <form class="main">
-        <div class="control-group">
-            <label class="control-label" for="url">URL</label>
-            <div class="controls">
-                <input name="url" type="text" value="{{url}}" placeholder="Your URL"/>
-            </div>
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
 
-        <div class="control-group">
-            <label class="control-label" for="title">Title</label>
-            <div class="controls">
-                <input name="title" type="text" value="{{title}}" placeholder="Name your post"/>
-            </div>
-        </div>
+                <form class="main">
+                    <div class="form-group">
+                        <label class="control-label" for="title">Title</label>
+                        <input class="form-control" name="title" type="text" value="{{title}}" placeholder="Name your post"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="message">Mensaje</label>
+                        <textarea class="form-control" name="message" type="text" value="{{message}}"></textarea>
+                    </div>
 
-        <div class="control-group">
-            <div class="controls">
-                <input type="submit" value="Submit" class="btn btn-primary submit"/>
+                    <hr/>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-primary submit"/>
+                        <a class="btn btn-danger delete" href="#">Delete post</a>
+                    </div>
+                </form>
             </div>
         </div>
-        <hr/>
-        <div class="control-group">
-            <div class="controls">
-                <a class="btn btn-danger delete" href="#">Delete post</a>
-            </div>
-        </div>
-    </form>
+    </div>
 </template>
