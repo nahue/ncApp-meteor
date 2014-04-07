@@ -8,10 +8,11 @@ coffeescript
 jquery
 iron-router
 spin
-accounts-ui-bootstrap-dropdown
 accounts-password
 underscore
 iron-router-progress
 accounts-entry
 less
 bootstrap3-less
+accounts-facebook
+accounts-ui
